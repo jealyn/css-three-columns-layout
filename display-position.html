@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>通过 position 实现三栏布局</title>
+    <style>
+    /* 容器宽度设置 */
+    .container {
+      width: 100%;
+    }
+    .left, .right {
+      /* 假设定宽部分宽度为200px */
+      width: 200px;
+      /* 假设三者的高度都为300px */
+      height: 300px;
+      position: absolute;
+      top: 0;
+    }
+    /* 左侧定位 */
+    .left {
+      left: 0;
+      background-color:red;
+    }
+    /* 中间自适应区 */
+    .center {
+      height: 300px;
+      position: absolute;
+      top: 0;
+      left: 200px;
+      right: 200px;
+      bottom: 0;
+      background-color:blue;
+    }
+    /* 右侧定位 */
+    .right {
+      right: 0;
+      background-color:red;
+    }
+    </style>
+</head>
+<body>
+  <div class="container">
+    <div class="left"></div>
+    <div class="center"></div>
+    <div class="right"></div>
+  </div>
+</body>
+</html>

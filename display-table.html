@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>通过 table布局 实现三栏布局</title>
+    <style>
+    .container {
+      width: 100%;
+      height: 300px;
+      display: table;/* 设置为 table 布局 */
+    }
+    /* 将其子项设置为 table-cell 布局 */
+    .left, .center, .right {
+      display: table-cell;
+    }
+    .left, .right {
+      width: 200px;
+      background-color:red;
+    }
+    .center {
+      background-color:blue;
+    }
+    </style>
+</head>
+<body>
+  <div class="container">
+    <div class="left"></div>
+    <div class="center"></div>
+    <div class="right"></div>
+  </div>
+</body>
+</html>

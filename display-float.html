@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>通过 float + calc 实现三栏布局</title>
+    <style>
+    /* 容器宽度设置 */
+    .container {
+      width: 100%;
+    }
+    /* 三者共有样式 */
+    .left, .center, .right {
+      height: 300px;
+      float: left;
+    }
+    /* 左侧样式 */
+    .left {
+      width: 200px;
+      background-color:red;
+    }
+    /* 中间样式，关键在 calc */
+    .center {
+      width: calc(100% - 400px);
+      background-color:blue;
+    }
+    /* 右侧样式 */
+    .right {
+      width: 200px;
+      background-color:red;
+    }
+    </style>
+</head>
+<body>
+  <div class="container">
+    <div class="left"></div>
+    <div class="center"></div>
+    <div class="right"></div>
+  </div>
+</body>
+</html>
